@@ -19,12 +19,13 @@
       <div class="col-sm-12"> <img class="img-responsive" id="catImg" src="" alt="cute cat"></div>
     </div>
     <div class="row" id="admin">
-      <button>Admin</button>
-          <form>
+      <input type="button" id="adminButton"value="admin"/>
+          <form method="get" id="formArea" class="hideAdminArea">
             catName: <input type="text" id="catName" value="">
             url: <input type="text" id="catUrl" value="">
             clicks: <input type="text" id="catClicks" value="">
-            <input type="submit" value="Submit">
+            <input type="button" id="save" value="save"/>
+            <input type="button" id="cancel" value="cancel"/>
           </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

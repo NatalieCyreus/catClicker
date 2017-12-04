@@ -21,12 +21,13 @@ var Cats = function(){
 
 var model = {
     currentCat : null,
-    cats : Cats()
+    cats : catsArray
 
 };
 
 var octopus = {
     init: function() {
+      Cats();
       model.currentCat = model.cats[0];
       buttonView.init();
       catView.init();
@@ -52,6 +53,8 @@ var octopus = {
       model.currentCat.count++;
       catView.render();
     }
+
+
 };
 
 var catView = {
@@ -85,6 +88,7 @@ var buttonView = {
     init : function() {
       this.buttonElem = document.getElementById('catButtons');
       this.render();
+
     },
     render: function() {
       var cat, elem, i;
@@ -113,7 +117,9 @@ var buttonView = {
 
   var adminView = {
     init: function() {
-      adminView.render();
+      this.render();
+      this.onClick();
+      this.adminShow();
       },
     render: function() {
       var currentCat = octopus.getCurrentCat();
@@ -123,6 +129,25 @@ var buttonView = {
       this.catName.value = currentCat.name;
       this.catUrl.value = currentCat.img;
       this.catClicks.value = currentCat.count;
+
+    },
+    adminShow: function() {
+      adminButton.addEventListener('click', function(){
+        console.log("heloo!")
+        $('#formArea').show();
+      })
+    },
+    onClick: function() {
+      save.addEventListener('click', function() {
+      var currentCat = octopus.getCurrentCat();
+      var name = document.getElementById('catName');
+      var url = document.getElementById('catUrl');
+      var catClicks = document.getElementById('catClicks');
+      currentCat.name = name.value;
+      currentCat.img = url.value;
+      currentCat.count = catClicks.value;
+      console.log(currentCat);
+      });
     }
   };
 

@@ -26,3 +26,10 @@ button {
 #kittenName {
   font-size: 23px;
 }
+
+.showAdminArea {
+  display: block;
+}
+#formArea {
+  display: none; 
+}
