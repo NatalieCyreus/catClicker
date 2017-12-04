@@ -133,7 +133,6 @@ var buttonView = {
     },
     adminShow: function() {
       adminButton.addEventListener('click', function(){
-        console.log("heloo!")
         $('#formArea').show();
       })
     },
@@ -146,8 +145,11 @@ var buttonView = {
       currentCat.name = name.value;
       currentCat.img = url.value;
       currentCat.count = catClicks.value;
-      console.log(currentCat);
       });
+
+      cancel.addEventListener('click', function(){
+        $('#formArea').hide();
+      })
     }
   };
 
