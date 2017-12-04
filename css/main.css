@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: url(http://cdn1.litlepups.net/resize/2016/05/20/small-background-blue-cute-galaxy-pastel-pink-sparkles-wallpaper.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+#clicks {
+  display: inline;
+}
+
+img {
+  border-style: outset;
+  border-color: black;
+  border-width: 7px;
+}
+
+button {
+  color: white;
+  background-color: pink;
+}
+
+#kittenName {
+  font-size: 23px;
+}

@@ -3,16 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Cat Clicker</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div id="kittieName"></div>
-    <div><img id="kittieImage" src="img/kittie.jpg"></div>
-    <div>Number of clicks <div id="clicks"></div></div>
-
-    <div id="kittieName2"></div>
-    <div><img id="kittieImage2" src="img/kittie2.jpg"></div>
-    <div>Number of clicks <div id="clicks2"></div></div>
-
+    <div class="row">
+      <div class="col-sm-12">
+        <ul id="catButtons">
+        </ul>
+      </div>
+      </div>
+    <div class="row" id="cat">
+      <div class="col-sm-12"id="kittenName"></div>
+      <div class="col-sm-12"><h1 id="clicks"></h1></div>
+      <div class="col-sm-12"> <img class="img-responsive" id="catImg" src="" alt="cute cat"></div>
+    </div>
+    <div class="row" id="admin">
+      <button>Admin</button>
+          <form>
+            catName: <input type="text" id="catName" value="">
+            url: <input type="text" id="catUrl" value="">
+            clicks: <input type="text" id="catClicks" value="">
+            <input type="submit" value="Submit">
+          </form>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
   </body>
